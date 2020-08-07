@@ -103,21 +103,4 @@ describe('App.vue', () => {
         wrapper.vm.currentImage = 3
         expect(wrapper.vm.currentImage).toBe(3)
     })
-    it('Calling nextQuestionEvent if selectedBoxes length is not lower than 1 does execute showNextImage', () => {
-        const wrapper = mount(App)
-        wrapper.vm.selectedBoxes = [1]
-        wrapper.vm.currentImage = 3
-        expect(wrapper.vm.currentImage).toBe(4)
-    })
-
-
-
-    //   nextQuestionEvent() {
-    //     if (this.selectedBoxes.length >= 1) {
-    //       this.showNextImage();
-    //       this.selectedBoxes = [];
-    //     }
-    //   },
-
-
 })
