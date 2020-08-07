@@ -81,7 +81,7 @@
               alt="survey image"
             />
           </div>
-          <div class="buttons">
+          <div class="buttons" id="buttons-survey-three">
             <div
               v-for="(btn, index) in buttons"
               :key="index"
@@ -121,11 +121,11 @@ import neutralCat from "./assets/img_cat_neutral.png";
 import sadCat from "./assets/img_cat_supersad.png";
 
 export default {
-  // name: "App",
+  name: "App",
   data() {
     return {
       // General Data
-      currentSurvey: 2,
+      currentSurvey: 1,
       carrusel: [image1, image2, image3, image4, image5, image6],
       previusImage: null,
       currentImage: 0,
@@ -183,7 +183,9 @@ export default {
         this.currentImage++;
         this.nextImage++;
       } else {
-        this.finishedSurvey = true;
+        setTimeout(() => {
+          this.finishedSurvey = true;
+        }, 1000);
       }
     },
     //Second Survey
